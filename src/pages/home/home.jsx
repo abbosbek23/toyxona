@@ -1,6 +1,6 @@
 // import React from 'react
 import { Grid } from "@mui/material"
-import Navbar from "../components/Navbar"
+import Navbar from "../../components/Navbar"
 
 const Home = () => {
   return (

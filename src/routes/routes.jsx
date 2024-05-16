@@ -3,7 +3,7 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 // import { Navbar } from '../components';
 import Protected from './protected';
 import { useAuth } from '../modules/auth/context';
-import { Home } from '../home/home';
+import { Home, Login, Register, Profile, Service, AboutUs, Faqs, ContactUs } from '../pages';
 
 function Router() {
 	const { user } = useAuth();
@@ -22,6 +22,11 @@ function Router() {
 			) : (
 				<Route path="/profile" element={<Navigate to="/auth/login" />} />
 			)}
+
+			<Route path="/service" element={<Service />} />
+			<Route path="/about-us" element={<AboutUs />} />
+			<Route path="/faqs" element={<Faqs />} />
+			<Route path="/contact-us" element={<ContactUs />} />
 
 			<Route path="*" element={<Navigate to="/auth/login" />} />
 		</Routes>
