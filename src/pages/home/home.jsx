@@ -1,6 +1,5 @@
 // import React from 'react
 import { Grid, Container, Typography, Box } from "@mui/material"
-import Navbar from "../components/Navbar"
 import Slider from "./Components/slider"
 
 import AdditionalBox from "./Components/additionalbox"
@@ -12,7 +11,7 @@ import Testimonals from "./Components/testimonals"
 const Home = () => {
   return (
     <div>
-        <Navbar/>
+        
         <Container>
       <Grid container spacing={2}>
         <Grid item xs={6} paddingLeft={0} style={{paddingLeft:"0px"}}>

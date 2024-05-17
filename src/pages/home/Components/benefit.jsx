@@ -2,10 +2,10 @@ import { Container, Typography } from '@mui/material'
 // import React from 'react'
 // import { Box } from '@mui/system';
 import { Grid } from "@mui/material"
-import creative from "../../assets/creative.png"
-import certified from "../../assets/Certified.png"
-import dollar from "../../assets/dollar.png"
-import time from "../../assets/time.png"
+import creative from "../../../assets/creative.png"
+import certified from "../../../assets/Certified.png"
+import dollar from "../../../assets/dollar.png"
+import time from "../../../assets/time.png"
 
 const benefits = [
     {
@@ -44,11 +44,11 @@ const Benefit = () => {
         Why Choose Us as Your Wedding Planner?
         </Typography>
         <Container style={{marginTop:"80px",marginLeft:"0px",paddingLeft:"0px"}}>
-            <Grid container spacing={2}>
+            <Grid container spacing={3}>
            {
             benefits.map((item)=><Grid item xs={3} key={item.id}>
             <img width={"48px"} height={"48px"} src={item.image} alt="" />
-            <Typography sx={{marginBlock:'10px',color:"#FFF"}}>{item.title}</Typography>
+            <Typography sx={{marginBlock:'10px',color:"#FFF",width:"100%"}}>{item.title}</Typography>
             <Typography sx={{marginBlock:'10px',color:"#FFF"}}>{item.descrition}</Typography> 
             </Grid>)
            } 

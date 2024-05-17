@@ -1,10 +1,10 @@
 // import React from 'react'
 import { Container, Grid, Typography, Box } from "@mui/material"
-import perfectionimage from "../../assets/perfectionimage.png"
+import perfectionimage from "../../../assets/perfectionimage.png"
 
 const Perfection = () => {
   return (
-    <Container>
+    <Container style={{marginBottom:"60px"}}>
       <Grid container spacing={2} style={{marginLeft:"0px",paddingLeft:"0px"}}>
         
           

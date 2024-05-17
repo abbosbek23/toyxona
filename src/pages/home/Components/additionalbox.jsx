@@ -1,10 +1,10 @@
 // import React from 'react'
 import { Box } from '@mui/system';
-import imagewedding from "../../assets/weddingimage.png"
-import location from "../../assets/location.png"
-import food from "../../assets/food.png"
-import dj from "../../assets/dj.png"
-import decor from "../../assets/decor.png"
+import imagewedding from "../../../assets/weddingimage.png"
+import location from "../../../assets/location.png"
+import food from "../../../assets/food.png"
+import dj from "../../../assets/dj.png"
+import decor from "../../../assets/decor.png"
 import { Typography, Grid } from '@mui/material';
 
 
@@ -43,9 +43,9 @@ const AdditionalBox = () => {
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={0}>
         <Grid item xs={2}>
-          <Box sx={{ height: '100vh', backgroundColor: '#FFF',marginLeft:"50px" }}>
+          <Box sx={{ height: '100vh', backgroundColor: '#FFF',marginLeft:"50px"}}>
             {
-              details.map((item)=><Box key={item.id} sx={{width:"240px",textAlign:"center",marginBlock:"60px"}}>
+              details.map((item)=><Box key={item.id} sx={{width:"240px",textAlign:"center",display:"flex",flexDirection:"column",alignItems:"center",marginBlock:"60px"}}>
                 <img src={item.image} alt="" />
                 <Typography sx={{marginBlock:"10px",textAlign:"center"}}>{item.title}</Typography>
                 <Typography sx={{marginBlock:"10px",textAlign:"center"}}>{item.descrition}</Typography>
@@ -61,7 +61,7 @@ const AdditionalBox = () => {
         <Grid item xs={2}>
           <Box sx={{ height: '100vh', backgroundColor: '#FFF', marginLeft:"35px" }}>
           {
-              details2.map((item)=><Box key={item.id} sx={{width:"240px",textAlign:"center",marginBlock:"60px"}}>
+              details2.map((item)=><Box key={item.id} sx={{width:"240px",display:"flex",flexDirection:"column",alignItems:"center",textAlign:"center",marginBlock:"60px"}}>
                 <img src={item.image} alt="" />
                 <Typography sx={{marginBlock:"10px",textAlign:"center"}}>{item.title}</Typography>
                 <Typography sx={{marginBlock:"10px",textAlign:"center"}}>{item.descrition}</Typography>
