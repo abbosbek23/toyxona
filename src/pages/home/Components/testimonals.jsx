@@ -14,7 +14,6 @@ const Testimonals = () => {
      </Typography>
      <Box>
         <Grid container spacing={2}>
-         
         </Grid>
      </Box>
         </Box>
