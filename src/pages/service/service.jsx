@@ -15,14 +15,8 @@ import Sec4Hasan from '../../assets/service-sec4-hasan.png';
 const service = () => {
 	return (
 		<div>
-			<section className="p-[64px]">
-				<h1 className="text-[48px] pb-[24px] text-[#252A2E]">Unforgettable Wedding Experiences</h1>
-				<p className="text-[18px] text-[#252A2E]">
-					Make your dream wedding a reality with our comprehensive range of wedding planning
-					services.
-				</p>
-			</section>
-			<section className="px-16 py-28 flex items-center justify-between">
+			
+			<section className="px-16 py-24 flex items-center justify-between">
 				<div className="">
 					<p className="text-[#D3874A]">SEAMLESS</p>
 					<h1 className="text-[40px] pb-[24px] pt-[16px] text-[#252A2E]">

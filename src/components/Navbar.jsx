@@ -19,6 +19,8 @@ const Navbar = () => {
 					display: 'flex',
 					marginTop: '30px',
 					alignItems: 'center',
+					paddingInline:"64px",
+					marginRight:"0px",
 				}}
 			>
 				<Box display={'flex'}>
@@ -39,7 +41,7 @@ const Navbar = () => {
 						style={{
 							backgroundColor: 'white',
 							marginRight: '0px',
-							marginLeft: '64px',
+							
 						}}
 						alt="logo"
 					/>
@@ -67,6 +69,7 @@ const Navbar = () => {
 								border: 'none',
 								background: 'transparent',
 								cursor: 'pointer',
+								
 							}}
 							className="burgerBtn"
 							onClick={() => setClicked(false)}
@@ -125,13 +128,13 @@ const Navbar = () => {
 				</Box>
 				<button
 					style={{
-						marginLeft: '30px',
 						background: '#D3874A',
 						border: 'none',
-						padding: '10px 30px',
+						padding: '10px 35px',
 						borderRadius: '30px',
 						color: 'white',
 						fontSize: '18px',
+						marginLeft:"60px"
 					}}
 				>
 					Sign in
