@@ -1,15 +1,5 @@
-// import React from 'react
-import { Grid } from "@mui/material"
-import Navbar from "../../components/Navbar"
-
-const Home = () => {
-  return (
-    <div>
-        <Navbar/>
-        <Grid>
-        </Grid>
-    </div>
-  )
+function home() {
+	return <div>home</div>;
 }
 
-export default Home
+export default home;
