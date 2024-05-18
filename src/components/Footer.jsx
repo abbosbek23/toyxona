@@ -9,7 +9,7 @@ import { IoLogoLinkedin } from 'react-icons/io5';
 import { FaYoutube } from 'react-icons/fa';
 
 function Footer() {
-	const navigate = useNavigate;
+	const navigate = useNavigate();
 	return (
 		<div>
 			<section className="relative px-16 py-28 text-center flex flex-col items-center gap-[80px] justify-center">

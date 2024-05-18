@@ -1,6 +1,8 @@
 import { default as Acardion } from '../../components/acordion';
+import { useNavigate } from 'react-router-dom';
 
-function faqs() {
+function Faq() {
+	const navigate = useNavigate();
 	return (
 		<div>
 			<section className="p-[64px]">
@@ -16,7 +18,10 @@ function faqs() {
 						<h3 className="text-[24px] font-semibold">Still have questions?</h3>
 						<p className="text-[18px]">Contact us for more information.</p>
 					</span>
-					<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] hover:bg-[#D3874A] hover:text-white transition-all">
+					<button
+						className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] hover:bg-[#D3874A] hover:text-white transition-all"
+						onClick={() => navigate('/contact-us')}
+					>
 						Contact
 					</button>
 				</div>
@@ -25,4 +30,4 @@ function faqs() {
 	);
 }
 
-export default faqs;
+export default Faq;
