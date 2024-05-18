@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Home, Service, AboutUs, Faqs, ContactUs } from '../pages';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { Login } from '../pages';
 
 function Router() {
 	// const { user } = useAuth();
@@ -16,8 +17,8 @@ function Router() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<Home />} />
-				{/* <Route path="/auth" element={<Protected allowed={isAllowed} to="/" />}>
 				<Route path="login" element={<Login />} />
+				{/* <Route path="/auth" element={<Protected allowed={isAllowed} to="/" />}>
 				<Route path="register" element={<Register />} />
 			</Route> */}
 
