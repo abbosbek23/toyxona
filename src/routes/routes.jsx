@@ -7,6 +7,10 @@ import { Home, Service, AboutUs, Faqs, ContactUs } from '../pages';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Login } from '../pages';
+import { Box } from '@mui/material';
+
+
+console.log(window.location.pathname);
 
 function Router() {
 	// const { user } = useAuth();
@@ -14,7 +18,11 @@ function Router() {
 
 	return (
 		<div className="">
+			{
+				window.location.pathname.split("/")[1] === "login" ? <Box></Box>:
 			<Navbar />
+			}
+			
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="login" element={<Login />} />
@@ -35,7 +43,11 @@ function Router() {
 
 				{/* <Route path="*" element={<Navigate to="/auth/login" />} /> */}
 			</Routes>
+			
+			{
+				window.location.pathname.split("/")[1] === "login" ? "" :
 			<Footer />
+			}
 		</div>
 	);
 }
