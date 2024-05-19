@@ -1,6 +1,5 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-// import React from 'react
-// import { Grid } from '@mui/material';
+// import { useState, useEffect } from 'react';
+// import axios from 'axios';
 import Sec2Img from '../../assets/service-sec2-img.png';
 import Sec3Img1 from '../../assets/service-sec3-img1.png';
 import Sec3Img2 from '../../assets/service-sec3-img2.png';
@@ -11,11 +10,32 @@ import Sec3Img6 from '../../assets/service-sec3-img6.png';
 import Sec4Stars from '../../assets/service-sec4-stars.png';
 import Sec4Liam from '../../assets/service-sec4-liam.png';
 import Sec4Hasan from '../../assets/service-sec4-hasan.png';
+import { FaLocationDot } from 'react-icons/fa6';
+import { FaPeopleGroup } from 'react-icons/fa6';
+
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const service = () => {
+	const [movies, setMovies] = useState([]);
+
+	useEffect(() => {
+		const fetchData = async () => {
+			try {
+				const response = await axios.get(
+					'https://api.themoviedb.org/3/movie/popular?api_key=YOUR_API_KEY'
+				);
+				setMovies(response.data.results);
+			} catch (error) {
+				console.error('Error fetching data:', error);
+			}
+		};
+
+		fetchData();
+	}, []);
+
 	return (
 		<div>
-			
 			<section className="px-16 py-24 flex items-center justify-between">
 				<div className="">
 					<p className="text-[#D3874A]">SEAMLESS</p>
@@ -90,6 +110,151 @@ const service = () => {
 				</div>
 				<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] hover:bg-[#D3874A] hover:text-white transition-all">
 					To Learn More Contact Us
+				</button>
+			</section>
+			<section className="px-16 py-28 flex flex-col items-center gap-[80px]">
+				<div className="text-center">
+					<p className="text-[#D3874A]">Wedding Halls</p>
+					<h1 className="text-[40px] pb-[24px] pt-[16px] text-[#252A2E]">
+						Beautiful wedding halls we offer
+					</h1>
+				</div>
+				<div className="grid grid-cols-3 gap-12">
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex items-center w-full justify-between">
+							<span className="flex gap-2 pb-3">
+								<FaLocationDot style={{ color: 'white' }} />
+								<p className="text-[16px]">
+									Navoiy viloyati Navbaxor tumani <br /> Karvon mahallasi Nishod 409
+								</p>{' '}
+							</span>
+							<span className="flex items-center gap-3">
+								<FaPeopleGroup />
+								<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">5000</strong>
+							</span>
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex gap-2 pb-3">
+							<FaLocationDot style={{ color: 'white' }} />
+							<p className="text-[16px]">
+								Navoiy viloyati Navbaxor tumani Karvon mahallasi Nishod 409
+							</p>{' '}
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex gap-2 pb-3">
+							<FaLocationDot style={{ color: 'white' }} />
+							<p className="text-[16px]">
+								Navoiy viloyati Navbaxor tumani Karvon mahallasi Nishod 409
+							</p>{' '}
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex gap-2 pb-3">
+							<FaLocationDot style={{ color: 'white' }} />
+							<p className="text-[16px]">
+								Navoiy viloyati Navbaxor tumani Karvon mahallasi Nishod 409
+							</p>{' '}
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex gap-2 pb-3">
+							<FaLocationDot style={{ color: 'white' }} />
+							<p className="text-[16px]">
+								Navoiy viloyati Navbaxor tumani Karvon mahallasi Nishod 409
+							</p>{' '}
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+					<div className="bg-[#DBDBDB] p-[20px] flex flex-col rounded">
+						<img
+							className="rounded"
+							src="https://adore-three.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbackground.8721e622.jpeg&w=1920&q=75"
+							alt=""
+						/>
+						{/* <Carusel /> */}
+						<span className="flex items-center w-full justify-between">
+							<h3 className="font-semibold text-[24px] py-4">Yakka Saroy</h3>
+							<strong className="font-semibold text-[24px] py-4 text-[#D3874A]">15.6 mln</strong>
+						</span>
+						<span className="flex gap-2 pb-3">
+							<FaLocationDot style={{ color: 'white' }} />
+							<p className="text-[16px]">
+								Navoiy viloyati Navbaxor tumani Karvon mahallasi Nishod 409
+							</p>{' '}
+						</span>
+						<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] bg-[#D3874A] hover:bg-transparent text-white hover:text-black transition-all">
+							Book this wending hall
+						</button>
+					</div>
+				</div>
+				<button className="px-6 py-3 border border-[#D3874A] rounded-full text-[16px] hover:bg-[#D3874A] hover:text-white transition-all">
+					Explore More
 				</button>
 			</section>
 			<section className="px-16 py-28 flex flex-col gap-[80px]">
